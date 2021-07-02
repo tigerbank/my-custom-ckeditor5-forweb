@@ -1,25 +1,7 @@
 {
-  "name": "@ckeditor/ckeditor5-build-classic",
-  "version": "28.0.0",
-  "description": "The classic editor build of CKEditor 5 – the best browser-based rich text editor.",
-  "keywords": [
-    "ckeditor5-build",
-    "ckeditor",
-    "ckeditor5",
-    "ckeditor 5",
-    "wysiwyg",
-    "rich text",
-    "editor",
-    "html",
-    "contentEditable",
-    "editing",
-    "operational transformation",
-    "ot",
-    "collaboration",
-    "collaborative",
-    "real-time",
-    "framework"
-  ],
+  "name": "my-custom-editor-ty",
+  "version": "1.0.0",
+  "description": "The custom text editor.",
   "main": "./build/ckeditor.js",
   "files": [
     "build"
@@ -67,13 +49,13 @@
     "node": ">=12.0.0",
     "npm": ">=5.7.1"
   },
-  "author": "CKSource (http://cksource.com/)",
+  "author": "",
   "license": "GPL-2.0-or-later",
-  "homepage": "https://ckeditor.com/ckeditor-5",
-  "bugs": "https://github.com/ckeditor/ckeditor5/issues",
+  "homepage": "",
+  "bugs": "",
   "repository": {
     "type": "git",
-    "url": "https://github.com/ckeditor/ckeditor5.git",
+    "url": "https://github.com/tigerbank/my-custom-ckeditor5-forweb",
     "directory": "packages/ckeditor5-build-classic"
   },
   "scripts": {
