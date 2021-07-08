@@ -95,6 +95,10 @@ ClassicEditor.defaultConfig = {
     fontColor: {
         colors: [
             {
+                color: 'hsl(0, 0%, 100%)',
+                label: 'White'
+            },
+            {
                 color: 'hsl(0, 0%, 0%)',
                 label: 'Black'
             },
