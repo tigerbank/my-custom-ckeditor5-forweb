@@ -35,6 +35,7 @@ import CloudServices from '@ckeditor/ckeditor5-cloud-services/src/cloudservices'
 import Alignment from '@ckeditor/ckeditor5-alignment/src/alignment';
 import Font from '@ckeditor/ckeditor5-font/src/font';
 import HtmlEmbed from '@ckeditor/ckeditor5-html-embed/src/htmlembed';
+import SourceEditing from '@ckeditor/ckeditor5-source-editing/src/sourceediting';
 
 
 export default class ClassicEditor extends ClassicEditorBase {}
@@ -71,7 +72,8 @@ ClassicEditor.builtinPlugins = [
 	TableToolbar,
 	TableProperties,
 	TableCellProperties,
-	HtmlEmbed
+	HtmlEmbed,
+    SourceEditing
 ];
 
 // Editor configuration.
@@ -90,6 +92,42 @@ ClassicEditor.defaultConfig = {
             28,
             30,
             32
+        ]
+    },
+    fontBackgroundColor: {
+        colors: [
+            {
+                color: 'hsl(0, 0%, 100%)',
+                label: 'White'
+            },
+            {
+                color: 'hsl(0, 0%, 0%)',
+                label: 'Black'
+            },
+            {
+                color: 'hsl(220, 38%, 94%)',
+                label: 'Light grey'
+            },
+            {
+                color: 'hsl(229, 18%, 70%)',
+                label: 'Grey'
+            },
+            {
+                color: 'hsl(208, 100%, 30%)',
+                label: 'Blue'
+            },
+            {
+                color: 'hsl(31, 93%, 54%)',
+                label: 'Orange'
+            },
+            {
+                color: 'hsl(359, 80%, 59%)',
+                label: 'Red'
+            },
+            {
+                color: 'hsl(151, 63%, 50%)',
+                label: 'Green'
+            },
         ]
     },
     fontColor: {
@@ -132,6 +170,10 @@ ClassicEditor.defaultConfig = {
 		items: [
 			'heading',
 			'|',
+            'fontSize',
+			'fontColor',
+            'fontBackgroundColor',
+            'sourceEditing',
 			'alignment',
 			'bold',
 			'italic',
@@ -142,23 +184,13 @@ ClassicEditor.defaultConfig = {
 			'outdent',
 			'indent',
 			'|',
-			'uploadImage',
 			'blockQuote',
 			'insertTable',
 			'mediaEmbed',
 			'undo',
 			'redo',
-			'fontSize',
-			'fontColor',
 			'htmlEmbed'
-		]
-	},
-	image: {
-		toolbar: [
-			'imageStyle:full',
-			'imageStyle:side',
-			'|',
-			'imageTextAlternative'
+            
 		]
 	},
 	table: {
