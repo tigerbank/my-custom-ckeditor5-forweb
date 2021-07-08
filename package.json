@@ -1,6 +1,6 @@
 {
   "name": "my-custom-editor-ty",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "The custom text editor.",
   "main": "./build/ckeditor.js",
   "files": [
@@ -28,8 +28,7 @@
     "@ckeditor/ckeditor5-paragraph": "^28.0.0",
     "@ckeditor/ckeditor5-paste-from-office": "^28.0.0",
     "@ckeditor/ckeditor5-table": "^28.0.0",
-    "@ckeditor/ckeditor5-typing": "^28.0.0",
-    "sanitize-html": "^2.4.0"
+    "@ckeditor/ckeditor5-typing": "^28.0.0"
   },
   "devDependencies": {
     "@ckeditor/ckeditor5-core": "^28.0.0",

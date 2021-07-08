@@ -35,7 +35,7 @@ import CloudServices from '@ckeditor/ckeditor5-cloud-services/src/cloudservices'
 import Alignment from '@ckeditor/ckeditor5-alignment/src/alignment';
 import Font from '@ckeditor/ckeditor5-font/src/font';
 import HtmlEmbed from '@ckeditor/ckeditor5-html-embed/src/htmlembed';
-import sanitizeHtml from 'sanitize-html';
+
 
 export default class ClassicEditor extends ClassicEditorBase {}
 
@@ -76,6 +76,54 @@ ClassicEditor.builtinPlugins = [
 
 // Editor configuration.
 ClassicEditor.defaultConfig = {
+    fontSize: {
+        options: [
+            12,
+            14,
+            16,
+            'default',
+            18,
+            20,
+            22,
+            24,
+            26,
+            28,
+            30,
+            32
+        ]
+    },
+    fontColor: {
+        colors: [
+            {
+                color: 'hsl(0, 0%, 0%)',
+                label: 'Black'
+            },
+            {
+                color: 'hsl(220, 38%, 94%)',
+                label: 'Light grey'
+            },
+            {
+                color: 'hsl(229, 18%, 70%)',
+                label: 'Grey'
+            },
+            {
+                color: 'hsl(208, 100%, 30%)',
+                label: 'Blue'
+            },
+            {
+                color: 'hsl(31, 93%, 54%)',
+                label: 'Orange'
+            },
+            {
+                color: 'hsl(359, 80%, 59%)',
+                label: 'Red'
+            },
+            {
+                color: 'hsl(151, 63%, 50%)',
+                label: 'Green'
+            },
+        ]
+    },
 	toolbar: {
 		items: [
 			'heading',
@@ -97,9 +145,7 @@ ClassicEditor.defaultConfig = {
 			'undo',
 			'redo',
 			'fontSize',
-			'fontFamily',
 			'fontColor',
-			'fontBackgroundColor',
 			'htmlEmbed'
 		]
 	},
@@ -122,20 +168,6 @@ ClassicEditor.defaultConfig = {
 	},
 	htmlEmbed: {
 		showPreviews: true,
-		sanitizeHtml: inputHtml => {
-			// Strip unsafe elements and attributes, e.g.:
-			// the `<script>` elements and `on*` attributes.
-			const outputHtml = sanitizeHtml( inputHtml, {
-				allowedTags: [ 'p', 'em', 'strong' ]
-			} );
-
-			return {
-				html: outputHtml,
-				// true or false depending on whether the sanitizer stripped anything.
-				hasChanged: true
-			};
-		}
 	},
-	// This value must be kept in sync with the language defined in webpack.config.js.
 	language: 'en'
 };
