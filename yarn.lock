@@ -200,6 +200,14 @@
   dependencies:
     ckeditor5 "^29.0.0"
 
+"@ckeditor/ckeditor5-html-support@^29.0.0":
+  version "29.0.0"
+  resolved "https://registry.yarnpkg.com/@ckeditor/ckeditor5-html-support/-/ckeditor5-html-support-29.0.0.tgz#7e3ab5ff7dd3c0bf8609b53197f8c27b5cee95de"
+  integrity sha512-+Kne1JsHGabquGpZDxcSBVozQyak+cBAFlDTAXoEH+9zAmFHqcg29jZIrd93YLpYb3ApetOPEvJWz8ww8UccFQ==
+  dependencies:
+    ckeditor5 "^29.0.0"
+    lodash-es "^4.17.15"
+
 "@ckeditor/ckeditor5-image@^29.0.0":
   version "29.0.0"
   resolved "https://registry.yarnpkg.com/@ckeditor/ckeditor5-image/-/ckeditor5-image-29.0.0.tgz#0b630f66094b9254d06e6344b70942723e51cbe7"

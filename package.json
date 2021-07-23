@@ -1,6 +1,6 @@
 {
   "name": "my-custom-editor-ty",
-  "version": "1.0.5",
+  "version": "1.0.6",
   "description": "The custom text editor.",
   "main": "./build/ckeditor.js",
   "files": [
@@ -20,6 +20,7 @@
     "@ckeditor/ckeditor5-font": "^29.0.0",
     "@ckeditor/ckeditor5-heading": "^29.0.0",
     "@ckeditor/ckeditor5-html-embed": "^29.0.0",
+    "@ckeditor/ckeditor5-html-support": "^29.0.0",
     "@ckeditor/ckeditor5-image": "^29.0.0",
     "@ckeditor/ckeditor5-indent": "^29.0.0",
     "@ckeditor/ckeditor5-link": "^29.0.0",
