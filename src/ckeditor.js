@@ -92,22 +92,22 @@ ClassicEditor.defaultConfig = {
             {
                 model: 'blueButton',
                 view: {
-                    name: 'div',
+                    name: 'p',
                     classes: 'ck-button button-blue'
                 },
                 title: 'Blue Button',
                 class: 'ck-button button-blue',
-                converterPriority: 'high'
+                converterPriority: 'low'
             },
             {
                 model: 'orangeButton',
                 view: {
-                    name: 'div',
+                    name: 'p',
                     classes: 'ck-button button-orange'
                 },
                 title: 'Orange Button',
                 class: 'ck-button button-orange',
-                converterPriority: 'high'
+                converterPriority: 'low'
             }
            
         ]
@@ -248,6 +248,12 @@ ClassicEditor.defaultConfig = {
             },
             {
                 name: 'span',
+                styles: true,
+                classes: true,
+                attributes: true
+            },
+            {
+                name: 'p',
                 styles: true,
                 classes: true,
                 attributes: true
