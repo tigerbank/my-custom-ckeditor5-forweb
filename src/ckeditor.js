@@ -258,6 +258,12 @@ ClassicEditor.defaultConfig = {
                 classes: true,
                 attributes: true
             },
+            {
+                name: 'a',
+                styles: true,
+                classes: true,
+                attributes: true
+            },
         ]
     },
 	language: 'en'
