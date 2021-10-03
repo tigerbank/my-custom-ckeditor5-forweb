@@ -78,6 +78,71 @@ ClassicEditor.builtinPlugins = [
     GeneralHtmlSupport
 ];
 
+
+const textColorPalette = [
+    {
+        color: 'hsl(0, 0%, 100%)',
+        label: 'White'
+    },
+    {
+        color: 'hsl(249, 15%, 35%)',
+        label: 'Dark grey'
+    },
+    {
+        color: 'hsl(208, 100%, 30%)',
+        label: 'Blue'
+    },
+    {
+        color: 'hsl(31, 93%, 54%)',
+        label: 'Orange'
+    },
+    {
+        color: 'hsl(359, 80%, 59%)',
+        label: 'Red'
+    },
+    {
+        color: 'hsl(151, 63%, 50%)',
+        label: 'Green'
+    },
+]
+
+const backgroundColorPalette = [
+    {
+        color: 'hsl(0, 0%, 100%)',
+        label: 'White'
+    },
+    {
+        color: 'hsl(233, 44%, 96%)',
+        label: 'Light grey'
+    },
+    {
+        color: 'hsl(208, 100%, 30%)',
+        label: 'Blue500'
+    },
+    {
+        color: 'hsl(204, 100%, 34%)',
+        label: 'Blue400'
+    },
+    {
+        color: 'hsl(204, 88%, 40%)',
+        label: 'Blue300'
+    },
+    {
+        color: 'hsl(31, 93%, 54%)',
+        label: 'Orange'
+    },
+    {
+        color: 'hsl(359, 80%, 59%)',
+        label: 'Red'
+    },
+    {
+        color: 'hsl(151, 63%, 50%)',
+        label: 'Green'
+    },
+]
+
+
+
 // Editor configuration.
 ClassicEditor.defaultConfig = {
     heading: {
@@ -129,80 +194,10 @@ ClassicEditor.defaultConfig = {
         ]
     },
     fontBackgroundColor: {
-        colors: [
-            {
-                color: 'hsl(0, 0%, 100%)',
-                label: 'White'
-            },
-            {
-                color: 'hsl(0, 0%, 0%)',
-                label: 'Black'
-            },
-            {
-                color: 'hsl(220, 38%, 94%)',
-                label: 'Light grey'
-            },
-            {
-                color: 'hsl(229, 18%, 70%)',
-                label: 'Grey'
-            },
-            {
-                color: 'hsl(208, 100%, 30%)',
-                label: 'Blue'
-            },
-            {
-                color: 'hsl(31, 93%, 54%)',
-                label: 'Orange'
-            },
-            {
-                color: 'hsl(359, 80%, 59%)',
-                label: 'Red'
-            },
-            {
-                color: 'hsl(151, 63%, 50%)',
-                label: 'Green'
-            },
-        ]
+        colors: backgroundColorPalette
     },
     fontColor: {
-        colors: [
-            {
-                color: 'hsl(0, 0%, 100%)',
-                label: 'White'
-            },
-            {
-                color: 'hsl(0, 0%, 0%)',
-                label: 'Black'
-            },
-            {
-                color: 'hsl(220, 38%, 94%)',
-                label: 'Light grey'
-            },
-            {
-                color: 'hsl(229, 18%, 70%)',
-                label: 'Grey'
-            },
-            {
-                color: 'hsl(249, 15%, 35%)',
-                label: 'Dark grey'
-            },
-            {
-                color: 'hsl(208, 100%, 30%)',
-                label: 'Blue'
-            },
-            {
-                color: 'hsl(31, 93%, 54%)',
-                label: 'Orange'
-            },
-            {
-                color: 'hsl(359, 80%, 59%)',
-                label: 'Red'
-            },
-            {
-                color: 'hsl(151, 63%, 50%)',
-                label: 'Green'
-            },
-        ]
+        colors: textColorPalette
     },
 	toolbar: {
 		items: [
@@ -237,7 +232,15 @@ ClassicEditor.defaultConfig = {
 			'mergeTableCells',
 			'tableProperties',
 			'tableCellProperties'
-		]
+		],
+        tableProperties: {
+            backgroundColors: backgroundColorPalette
+        },
+
+        // Set the palettes for table cells.
+        tableCellProperties: {
+            backgroundColors: backgroundColorPalette
+        }
 	},
 	htmlEmbed: {
 		showPreviews: true,
