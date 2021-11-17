@@ -38,240 +38,339 @@ import HtmlEmbed from '@ckeditor/ckeditor5-html-embed/src/htmlembed';
 import SourceEditing from '@ckeditor/ckeditor5-source-editing/src/sourceediting';
 import GeneralHtmlSupport from '@ckeditor/ckeditor5-html-support/src/generalhtmlsupport';
 
-
 export default class ClassicEditor extends ClassicEditorBase {}
 
 // Plugins to include in the build.
 ClassicEditor.builtinPlugins = [
-	Essentials,
-	UploadAdapter,
-	Autoformat,
-	Bold,
-	Italic,
-	BlockQuote,
-	CKFinder,
-	CloudServices,
-	EasyImage,
-	Heading,
-	Image,
-	ImageCaption,
-	ImageStyle,
-	ImageToolbar,
-	ImageUpload,
-	Indent,
-	Link,
-	List,
-	MediaEmbed,
-	Paragraph,
-	PasteFromOffice,
-	Table,
-	TableToolbar,
-	TextTransformation,
-	Alignment,
-	Font,
-	Table,
-	TableToolbar,
-	TableProperties,
-	TableCellProperties,
-	HtmlEmbed,
-    SourceEditing,
-    GeneralHtmlSupport
+  Essentials,
+  UploadAdapter,
+  Autoformat,
+  Bold,
+  Italic,
+  BlockQuote,
+  CKFinder,
+  CloudServices,
+  EasyImage,
+  Heading,
+  Image,
+  ImageCaption,
+  ImageStyle,
+  ImageToolbar,
+  ImageUpload,
+  Indent,
+  Link,
+  List,
+  MediaEmbed,
+  Paragraph,
+  PasteFromOffice,
+  Table,
+  TableToolbar,
+  TextTransformation,
+  Alignment,
+  Font,
+  Table,
+  TableToolbar,
+  TableProperties,
+  TableCellProperties,
+  HtmlEmbed,
+  SourceEditing,
+  GeneralHtmlSupport,
 ];
 
-
 const textColorPalette = [
-    {
-        color: 'hsl(0, 0%, 100%)',
-        label: 'White'
-    },
-    {
-        color: 'hsl(249, 15%, 35%)',
-        label: 'Dark grey'
-    },
-    {
-        color: 'hsl(208, 100%, 30%)',
-        label: 'Blue'
-    },
-    {
-        color: 'hsl(31, 93%, 54%)',
-        label: 'Orange'
-    },
-    {
-        color: 'hsl(359, 80%, 59%)',
-        label: 'Red'
-    },
-    {
-        color: 'hsl(151, 63%, 50%)',
-        label: 'Green'
-    },
-]
+  {
+    color: 'hsl(0, 0%, 100%)',
+    label: 'White',
+  },
+  {
+    color: 'hsl(249, 15%, 35%)',
+    label: 'Dark grey',
+  },
+  {
+    color: 'hsl(208, 100%, 30%)',
+    label: 'Blue',
+  },
+  {
+    color: 'hsl(31, 93%, 54%)',
+    label: 'Orange',
+  },
+  {
+    color: 'hsl(359, 80%, 59%)',
+    label: 'Red',
+  },
+  {
+    color: 'hsl(151, 63%, 50%)',
+    label: 'Green',
+  },
+  {
+    color: 'hsl(198, 69%, 61%)',
+    label: 'Light blue',
+  },
+];
 
 const backgroundColorPalette = [
-    {
-        color: 'hsl(0, 0%, 100%)',
-        label: 'White'
-    },
-    {
-        color: 'hsl(233, 44%, 96%)',
-        label: 'Light grey'
-    },
-    {
-        color: 'hsl(208, 100%, 30%)',
-        label: 'Blue500'
-    },
-    {
-        color: 'hsl(204, 100%, 34%)',
-        label: 'Blue400'
-    },
-    {
-        color: 'hsl(204, 88%, 40%)',
-        label: 'Blue300'
-    },
-    {
-        color: 'hsl(31, 93%, 54%)',
-        label: 'Orange'
-    },
-    {
-        color: 'hsl(359, 80%, 59%)',
-        label: 'Red'
-    },
-    {
-        color: 'hsl(151, 63%, 50%)',
-        label: 'Green'
-    },
-]
+  {
+    color: 'hsl(0, 0%, 100%)',
+    label: 'White',
+  },
+  {
+    color: 'hsl(233, 44%, 96%)',
+    label: 'Light grey',
+  },
+  {
+    color: 'hsl(208, 100%, 30%)',
+    label: 'Blue500',
+  },
+  {
+    color: 'hsl(204, 100%, 34%)',
+    label: 'Blue400',
+  },
+  {
+    color: 'hsl(204, 88%, 40%)',
+    label: 'Blue300',
+  },
+  {
+    color: 'hsl(31, 93%, 54%)',
+    label: 'Orange',
+  },
+  {
+    color: 'hsl(359, 80%, 59%)',
+    label: 'Red',
+  },
+  {
+    color: 'hsl(151, 63%, 50%)',
+    label: 'Green',
+  },
+  {
+    color: 'hsl(198, 69%, 61%)',
+    label: 'Light blue',
+  },
+];
 
-
+const borderColorPalette = [
+  {
+    color: 'hsl(0, 0%, 0%)',
+    label: 'Black',
+  },
+  {
+    color: 'hsl(0, 0%, 30%)',
+    label: 'Dim grey',
+  },
+  {
+    color: 'hsl(0, 0%, 60%)',
+    label: 'Grey',
+  },
+  {
+    color: 'hsl(0, 0%, 90%)',
+    label: 'Light grey',
+  },
+  {
+    color: 'hsl(0, 0%, 100%)',
+    label: 'White',
+    hasBorder: true,
+  },
+  {
+    color: 'hsl(0, 75%, 60%)',
+    label: 'Red',
+  },
+  {
+    color: 'hsl(30, 75%, 60%)',
+    label: 'Orange',
+  },
+  {
+    color: 'hsl(60, 75%, 60%)',
+    label: 'Yellow',
+  },
+  {
+    color: 'hsl(90, 75%, 60%)',
+    label: 'Light green',
+  },
+  {
+    color: 'hsl(120, 75%, 60%)',
+    label: 'Green',
+  },
+  {
+    color: 'hsl(150, 75%, 60%)',
+    label: 'Aquamarine',
+  },
+  {
+    color: 'hsl(180, 75%, 60%)',
+    label: 'Turquoise',
+  },
+  {
+    color: 'hsl(210, 75%, 60%)',
+    label: 'Light blue',
+  },
+  {
+    color: 'hsl(240, 75%, 60%)',
+    label: 'Blue',
+  },
+  {
+    color: 'hsl(270, 75%, 60%)',
+    label: 'Purple',
+  },
+  {
+    color: 'hsl(220, 38%, 94%)',
+    label: 'Lighter grey',
+  },
+];
 
 // Editor configuration.
 ClassicEditor.defaultConfig = {
-    heading: {
-        options: [
-            { model: 'paragraph', title: 'Paragraph', class: 'ck-heading_paragraph' },
-            { model: 'heading1', view: 'h1', title: 'Heading 1', class: 'ck-heading_heading1' },
-            { model: 'heading2', view: 'h2', title: 'Heading 2', class: 'ck-heading_heading2' },
-            { model: 'heading3', view: 'h3', title: 'Heading 3', class: 'ck-heading_heading3' },
-            { model: 'heading4', view: 'h4', title: 'Heading 4', class: 'ck-heading_heading4' },
-            { model: 'heading5', view: 'h5', title: 'Heading 5', class: 'ck-heading_heading5' },
-            { model: 'heading6', view: 'h6', title: 'Heading 6', class: 'ck-heading_heading6' },
-            {
-                model: 'blueButton',
-                view: {
-                    name: 'p',
-                    classes: 'ck-button button-blue'
-                },
-                title: 'Blue Button',
-                class: 'ck-button button-blue',
-                converterPriority: 'low'
-            },
-            {
-                model: 'orangeButton',
-                view: {
-                    name: 'p',
-                    classes: 'ck-button button-orange'
-                },
-                title: 'Orange Button',
-                class: 'ck-button button-orange',
-                converterPriority: 'low'
-            }
-           
-        ]
-    },
-    fontSize: {
-        options: [
-            12,
-            14,
-            16,
-            'default',
-            18,
-            20,
-            22,
-            24,
-            26,
-            28,
-            30,
-            32
-        ]
-    },
-    fontBackgroundColor: {
-        colors: backgroundColorPalette
-    },
-    fontColor: {
-        colors: textColorPalette
-    },
-	toolbar: {
-		items: [
-			'heading',
-			'|',
-            'fontSize',
-			'fontColor',
-            'fontBackgroundColor',
-            'sourceEditing',
-			'alignment',
-			'bold',
-			'italic',
-			'link',
-			'bulletedList',
-			'numberedList',
-			'|',
-			'outdent',
-			'indent',
-			'|',
-			'blockQuote',
-			'insertTable',
-			'mediaEmbed',
-			'undo',
-			'redo',
-			'htmlEmbed'
-		]
-	},
-	table: {
-		contentToolbar: [
-			'tableColumn',
-			'tableRow',
-			'mergeTableCells',
-			'tableProperties',
-			'tableCellProperties'
-		],
-        tableProperties: {
-            backgroundColors: backgroundColorPalette
+  heading: {
+    options: [
+      { model: 'paragraph', title: 'Paragraph', class: 'ck-heading_paragraph' },
+      {
+        model: 'heading1',
+        view: 'h1',
+        title: 'Heading 1',
+        class: 'ck-heading_heading1',
+      },
+      {
+        model: 'heading2',
+        view: 'h2',
+        title: 'Heading 2',
+        class: 'ck-heading_heading2',
+      },
+      {
+        model: 'heading3',
+        view: 'h3',
+        title: 'Heading 3',
+        class: 'ck-heading_heading3',
+      },
+      {
+        model: 'heading4',
+        view: 'h4',
+        title: 'Heading 4',
+        class: 'ck-heading_heading4',
+      },
+      {
+        model: 'heading5',
+        view: 'h5',
+        title: 'Heading 5',
+        class: 'ck-heading_heading5',
+      },
+      {
+        model: 'heading6',
+        view: 'h6',
+        title: 'Heading 6',
+        class: 'ck-heading_heading6',
+      },
+      {
+        model: 'blueButton',
+        view: {
+          name: 'p',
+          classes: 'ck-button button-blue',
         },
-
-        // Set the palettes for table cells.
-        tableCellProperties: {
-            backgroundColors: backgroundColorPalette
-        }
-	},
-	htmlEmbed: {
-		showPreviews: true,
-	},
-    htmlSupport: {
-        allow: [
-            {
-                name: 'div',
-                styles: true,
-                classes: true,
-                attributes: true
-            },
-            {
-                name: 'span',
-                styles: true,
-                classes: true,
-                attributes: true
-            },
-            {
-                name: 'p',
-                styles: true,
-                classes: true,
-                attributes: true
-            },
-            {
-                name: 'a',
-                styles: true,
-                classes: true,
-                attributes: true
-            },
-        ]
+        title: 'Blue Button',
+        class: 'ck-button button-blue',
+        converterPriority: 'low',
+      },
+      {
+        model: 'orangeButton',
+        view: {
+          name: 'p',
+          classes: 'ck-button button-orange',
+        },
+        title: 'Orange Button',
+        class: 'ck-button button-orange',
+        converterPriority: 'low',
+      },
+      {
+        model: 'lightBlueButton',
+        view: {
+          name: 'p',
+          classes: 'ck-button button-light-blue',
+        },
+        title: 'Light Blue Button',
+        converterPriority: 'low',
+      },
+    ],
+  },
+  fontSize: {
+    options: [12, 14, 16, 'default', 18, 20, 22, 24, 26, 28, 30, 32],
+  },
+  fontBackgroundColor: {
+    colors: backgroundColorPalette,
+  },
+  fontColor: {
+    colors: textColorPalette,
+  },
+  toolbar: {
+    items: [
+      'heading',
+      '|',
+      'fontSize',
+      'fontColor',
+      'fontBackgroundColor',
+      'sourceEditing',
+      'alignment',
+      'bold',
+      'italic',
+      'link',
+      'bulletedList',
+      'numberedList',
+      '|',
+      'outdent',
+      'indent',
+      '|',
+      'blockQuote',
+      'insertTable',
+      'mediaEmbed',
+      'undo',
+      'redo',
+      'htmlEmbed',
+    ],
+  },
+  table: {
+    contentToolbar: [
+      'tableColumn',
+      'tableRow',
+      'mergeTableCells',
+      'tableProperties',
+      'tableCellProperties',
+    ],
+    tableProperties: {
+      backgroundColors: backgroundColorPalette,
+      borderColors: borderColorPalette,
     },
-	language: 'en'
+
+    // Set the palettes for table cells.
+    tableCellProperties: {
+      backgroundColors: backgroundColorPalette,
+      borderColors: borderColorPalette,
+    },
+  },
+  htmlEmbed: {
+    showPreviews: true,
+  },
+  htmlSupport: {
+    allow: [
+      {
+        name: 'div',
+        styles: true,
+        classes: true,
+        attributes: true,
+      },
+      {
+        name: 'span',
+        styles: true,
+        classes: true,
+        attributes: true,
+      },
+      {
+        name: 'p',
+        styles: true,
+        classes: true,
+        attributes: true,
+      },
+      {
+        name: 'a',
+        styles: true,
+        classes: true,
+        attributes: true,
+      },
+    ],
+  },
+  language: 'en',
 };
